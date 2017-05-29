@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+    width: auto;
+    background: url(../image/bg1.jpg) no-repeat center center;
+    background-attachment: fixed;
+    font-family: 'Microsoft Yahei';
+    font-size: 62.5%;
+}
+
+a{
+    text-decoration: none;
+}
+
+@mixin font($font,$font1,$color){
+    font-size: $font;
+    font-size: $font1;
+    color: $color;
+}
+
+h1{
+    @include font(42px,4.2rem,#fff)
+}

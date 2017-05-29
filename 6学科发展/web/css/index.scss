@@ -1,0 +1,737 @@
+@import url(public.css);
+.clear{
+    clear: both;
+}
+@mixin font($font,$font1,$color){
+    font-size: $font;
+    font-size: $font1;
+    color: $color;
+}
+
+.shade{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    display: none;
+    .x{
+        font-size: 30px;
+        position: fixed;
+        top: 0;
+        right: 10px;
+        z-index: 6;
+        cursor: pointer;
+    }
+}
+
+.returntop{
+    font-family: 'iconfont';
+    background: rgba(12,70,130,0.7);
+    @include font(30px,3rem,#fff);
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+    border-radius: 5px;
+}
+
+#allmap{
+    height: 100%;
+    width: 100%;
+}
+
+.head{
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.title{
+    width: 92%;
+    margin: 0 auto;
+    .icon{
+        font-family: 'iconfont';
+        @include font(35px,3.5rem,#155da1);
+        display: none;
+        line-height: 78px;
+        cursor: pointer;
+        float: right;
+    }
+    span{
+        font-family: 'iconfont';
+        @include font(62px,6rem,#3577b2);
+        line-height: 78px;
+        float: left;
+        cursor: pointer;
+    }
+
+    p{
+        @extend span;
+        @include font(26px,2.6rem,#011f5f);
+        margin-left: 3.2%;
+    }
+}
+
+.gps{
+    width: 68%;
+    float: right;
+    .gps-son{
+        float: right;
+        a{
+            @include font(13px,1.3rem,#0962b2);
+            line-height: 68px;
+            margin-left: 20px;
+        }
+        a:hover{
+            color: #228aec;
+        }
+        .index:hover{
+            color: #0962b2;
+        }
+    }
+}
+
+.gps-2{
+    .gps-none{
+        display: none;
+        position: fixed;
+        top: 78px;
+        right: 0;
+        a:hover{
+            color: #fff;
+            background: #0c4682;
+        }
+        a{
+            text-align :center;
+            line-height: 35px;
+            display: block;
+            @include font(13px,1.3rem,#155da1);
+            width: 100px;
+            background: #fff;
+        }
+    }
+}
+
+.info{
+    width: 100%;
+    height: 78px;
+}
+
+.banner{
+    height: 800px;
+    background: rgba(5,43,82,0.7);
+    overflow: hidden;
+    .ban-son{
+        margin: 22.6% 0 0 16%;
+        display: none;
+    }
+    h1{
+        letter-spacing: 2px;
+    }
+    h2{
+        @include font(42px,4.2rem,#fff);
+        font-weight: normal;
+    }
+    .mar-t{
+        margin-top: 45px;
+    }
+
+    h3{
+        @include font(18px,1.8rem,#fff);
+        font-weight: normal;
+    }
+}
+
+.big-date{
+    overflow: hidden;
+    .left{
+        width: 43%;
+        height: 549px;
+        background: #eaf4f6;
+        float: left;
+        padding-top: 91px;
+        h1{
+            color: #011958;
+            margin-left: 29.5%;
+            display:none;
+        }
+        p{
+            @include font(42px,4.2rem,#001344);
+            @extend h1;
+        }
+    }
+    .right{
+        width: 57%;
+        height: 640px;
+        background: #fff;
+        float: left;
+        .mar-t10{
+            margin-top: 10%;
+        }
+        ul{
+            width: 200px;
+            list-style-type: square;
+            margin-left:14.8%;
+            display: none;
+            li{
+                @include font(27px,2.7rem,#41b7c4);
+                a{
+                    @include font(20px,2rem,#002f5a);
+                }
+                .go{
+                    width: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    @include font(17px,1.7rem,#fff);
+                    float: right;
+                    background: #2b6ca3;
+                    border-radius: 40px;
+                    cursor: pointer;
+                }
+                .go:hover{
+                    background: #033160;
+                }
+            }
+            .width{
+                width: 225px;
+            }
+        }
+        .con{
+            margin: 20px 0 40px 14.8%;
+            width: 72%;
+            @include font(14px,1.4rem,#0f5290);
+            display: none;
+        }
+    }
+}
+
+.stu{
+    height: 810px;
+    background: #00305b;
+    overflow: hidden;
+    h1{
+        width: 200px;
+        text-align: center;
+        @include font(42px,4.2rem,#fff);
+        margin: 7.6% auto 0 auto;
+        display: none;
+    }
+    .text{
+        width: 67%;
+        height: 555px;
+        background: #eaf4f6;
+        margin: 2.2% auto 0 auto;
+        overflow: hidden;
+        .mar-t10{
+            margin-top: 45px;
+        }
+        ul{
+            list-style-type: square;
+            margin-left: 12%;
+            width: 200px;
+            display: none;
+            li{
+                @include font(27px,2.7rem,#41b7c4);
+                a{
+                    @include font(20px,2rem,#002f5a);
+                }
+                .go{
+                    width: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    @include font(17px,1.7rem,#fff);
+                    float: right;
+                    background: #2b6ca3;
+                    border-radius: 40px;
+                    cursor: pointer;
+                }
+                .go:hover{
+                    background: #033160;
+                }
+            }
+            .width{
+                width: 160px;
+            }
+        }
+        .con{
+            margin: 20px 0 40px 12%;
+            width: 80%;
+            @include font(14px,1.4rem,#0f5290);
+            display: none;
+        }
+    }
+}
+
+.opacity{
+    height: 410px;
+    background: rgba(5,43,82,0.7);
+}
+
+.res{
+    height: auto;
+    background: #eaf4f6;
+    overflow: hidden;
+    position: relative;
+    h1{
+        width: 180px;
+        color: #001143;
+        display: none;
+        margin: 90px auto 0 auto;
+    }
+    .line{
+        height: 90%;
+        width: 2px;
+        background: #bdd9ef;
+        position: absolute;
+        top: 0;
+        left: 19.5%;
+    }
+    .res-son{
+        width: 100%;
+        margin: 0 18%;
+        margin-top: 40px;
+        .arr-per{
+            height: 100%;
+            .son{
+                width: 100%;
+                margin-bottom: 20px;
+                .arrows:hover{
+                    @include font(25px,2.5rem,#fff);
+                }
+                .arrows{
+                    font-family: 'iconfont';
+                    @include font(20px,2rem,#fff);
+                    line-height: 45px;
+                    text-align: center;
+                    height: 45px;
+                    width: 45px;
+                    border-radius: 45px;
+                    background: #276ca4;
+                    cursor: pointer;
+                    float: left;
+                    position: relative;
+                    z-index: 2;
+                }
+                .son-font{
+                    width: 170px;
+                    text-align: center;
+                    float: left;
+                    display: none;
+                    margin-left: 7%;
+                    p{
+                        @include font(20px,2rem,#00053a);
+                    }
+                    .h{
+                        color:#377DBD;
+                    }
+                }
+                span{
+                    float: left;
+                    width: 45%;
+                    margin-left: 3%;
+                    @include font(14px,1.5rem,#00305B);
+                    display: none;
+                }
+            }
+            .mar{
+                margin-bottom: 100px;
+            }
+        }
+    }
+}
+
+.contact{
+    height: 720px;
+    background: url(../image/bg2.jpg) no-repeat center center;
+    background-size: cover;
+    .left{
+        height: 100%;
+        width: 43%;
+        float: left;
+        background: rgba(5,60,120,0.9);
+        h1{
+            font-weight: normal;
+            margin-left: 26%;
+            display: none;
+        }
+        .h1{
+            @include font(40px,4rem,#fff);
+            margin-top: 21%;
+            font-weight: bold;
+        }
+    }
+    .right{
+        height: 100%;
+        width: 57%;
+        float: left;
+        background: rgba(16,77,125,0.8);
+        .mar-t{
+            margin: 15% 0 0 15%;
+            display: none;
+            .bold{
+                font-weight: bold;
+                margin-right: 5px;
+            }
+            p{
+                float: left;
+                @include font(20px,2rem,#fff);
+            }
+            .clear{
+                clear: both;
+            }
+            .site{
+                @include font(16px,1.6rem,#fff);
+                margin: 30px 0 5px 0;
+            }
+            .email{
+                margin-bottom: 5px;
+            }
+            span{
+                @include font(16px,1.6rem,#fff);
+                font-weight: bold;
+            }
+            a{
+                @include font(16px,1.6rem,#fff);
+            }
+            .map:active{
+                box-shadow: 1px 1px 1px 1px darken(#17548b, 10%) inset;
+            }
+            .map{
+                width: 100px;
+                line-height: 30px;
+                border-radius: 5px;
+                text-align: center;
+                box-shadow: 1px 1px 1px 1px darken(#17548b, 10%);
+                display: block;
+                margin-top: 30px;
+                background: #17548b;
+                cursor: pointer;
+                opacity: 0.8;
+            }
+            [title]{
+                color:#a9ebea;
+                font-weight: normal;
+                margin-bottom: 5px;
+            }
+            a[title]{
+                text-decoration: underline;
+            }
+            .icon{
+                display: block;
+                width: 25px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                float: left;
+                margin: 40% 5px 0 0;
+                background: #fff;
+                font-family: 'iconfont';
+                @include font(25px,2.5rem,#0073b2);
+            }
+            .c{
+                color: #55acee;
+            }
+             .red{
+                 color:#dd4b39;
+             }
+        }
+    }
+}
+
+.back{
+    clear: both;
+    height: 70px;
+    background: #00305b;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+    a{
+        font-family: 'iconfont';
+        @include font(30px,3rem,#fff);
+    }
+    a[title]{
+        @include font(16px,1.6rem,#fff);
+    }
+}
+
+.bottom{
+    height: 108px;
+    background: rgba(5,43,82,0.7);
+    text-align: center;
+    line-height: 70px;
+    @include font(14px,1.4rem,#2a3b6d);
+}
+
+@media screen and (max-width: 970px){
+    .gps{
+        width: auto;
+    }
+    .title{
+        .icon{
+            display: block;
+        }
+    }
+    .gps{
+        a{
+            display: none;
+        }
+    }
+    .big-date{
+        .right{
+            .mar-t10{
+                margin-top: 2%;
+            }
+            .con{
+                margin: 10px 0 10px 14.8%;
+            }
+        }
+    }
+    .opacity{
+        height: 200px;
+    }
+    .contact{
+        height: 400px;
+        .left{
+            h1{
+                @include font(25px,2.5rem,#fff);
+            }
+            .h1{
+                @include font(25px,2.5rem,#fff);
+            }
+        }
+        .right{
+            .mar-t{
+                .icon{
+                    margin: 10% 5px 0 0;
+                }
+            }
+        }
+    }
+    .bottom{
+        height: 54px;
+        line-height: 54px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .title{
+        span{
+            @include font(40px,4rem,#3577b2);
+        }
+        p{
+            @include font(20px,2rem,#00305B);
+            margin-left: 3.5%;
+        }
+    }
+    .banner{
+        h2{
+            @include font(25px,2.5rem,#fff);
+            font-weight: normal;
+        }
+    }
+    .gps-2{
+        .icon{
+            @include font(25px,2.5rem,#155da1);
+        }
+    }
+    .big-date{
+        .left{
+            p{
+                display: block;
+            }
+            width: 100%;
+            height: 70px;
+            padding-top: 0;
+            h1{
+                width: 150px;
+                text-align: center;
+                @include font(25px,2.5rem,#011958);
+                margin: 0 auto;
+                display: block;
+            }
+
+        }
+        .right{
+            height: auto;
+            width: 100%;
+            ul{
+                margin: 0 auto;
+                display: block;
+                li{
+                    @include font(20px,2rem,#41b7c4);
+                    a{
+                        @include font(20px,2rem,#002f5a);
+                    }
+                    .go{
+                        width: 30px;
+                        line-height: 30px;
+                        @include font(14px,1.4rem,#fff);
+                    }
+                }
+                .width{
+                    width: 200px;
+                }
+            }
+            .con{
+                margin: 10px auto;
+                width: 95%;
+                display: block;
+            }
+        }
+    }
+    .banner{
+        height: 500px;
+        h1{
+            @include font(35px,3.5rem,#fff);
+        }
+        h2{
+            @include font(35px,3.5rem,#fff);
+        }
+        h3{
+            @include font(15px,1.5rem,#fff);
+        }
+    }
+    .stu{
+        height: auto;
+        h1{
+            @include font(25px,2.5rem,#fff);
+        }
+        .text{
+            width: 95%;
+            margin-bottom: 10px;
+            height: auto;
+            ul{
+                margin: 0 auto;
+                li{
+                    @include font(20px,2rem,#41b7c4);
+                    a{
+                        @include font(20px,2rem,#002f5a);
+                    }
+                    .go{
+                        width: 30px;
+                        line-height: 30px;
+                        @include font(14px,1.4rem,#fff);
+                    }
+                }
+                .width{
+                        width: 200px;
+                    }
+                .con{
+                    margin: 10px 0 20px 0;
+                    @include font(14px,1.4rem,#0f5290);
+                }
+            }
+        }
+    }
+    .res{
+        .line{
+            display: none;
+        }
+        h1{
+            margin: 0 auto;
+            display: block;
+        }
+        .res-son{
+            margin: 0;
+            .arr-per{
+                .son{
+                    width: 100%;
+                    .arrows{
+                        display: none;
+                    }
+                    .son-font{
+                        width: 100%;
+                        margin: 0 auto;
+                    }
+                    span{
+                        width: 95%;
+                        margin-left: 2.5%;
+                    }
+                }
+                .mar{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    .opacity{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .title{
+        .icon{
+            @include font(25px,2.5rem,#155da1);
+        }
+    }
+    .banner{
+        height: 200px;
+        .ban-son{
+            margin: 10% 0 5% 16%;
+        }
+        h1{
+            @include font(20px,2rem,#fff);
+        }
+        h2{
+            @include font(20px,2rem,#fff);
+        }
+        .mar-t{
+            margin-top: 10px;
+        }
+        h3{
+            @include font(12px,1.2rem,#fff);
+        }
+    }
+    .stu{
+        h1{
+            display: block;
+        }
+    }
+    .opacity{
+        height: 50px;
+    }
+    .contact{
+        height: 250px;
+        .left{
+            width: 100%;
+            text-align: center;
+            h1{
+                margin: 0;
+                display: block;
+            }
+            .h1{
+                margin-top: 5%;
+            }
+        }
+        .right{
+            width: 100%;
+            .mar-t{
+                margin: 0;
+                display: block;
+                .site{
+                    @include font(16px,1.6rem,#fff);
+                    margin: 5px 0;
+                }
+                .icon{
+                    margin: 5px;
+                }
+            }
+        }
+    }
+    .back{
+        height: 60px;
+        padding-top: 0;
+        font-family: 'Microsoft Yahei'
+    }
+    .bottom{
+        @include font(12px,1.2rem,#fff);
+    }
+}

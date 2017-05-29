@@ -1,0 +1,1 @@
+var swiper=new Swiper(".swiper-container",{pagination:".swiper-pagination",paginationClickable:!0,paginationClickable:!0,spaceBetween:30,loop:!0,autoplay:1e3});

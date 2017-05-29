@@ -1,0 +1,514 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+    width: auto;
+    font-family: 'Microsoft Yahei';
+    font-size: 62.5%;
+}
+
+input{
+    outline: none;
+    border: none;
+    background: none;
+}
+
+@mixin font($font,$font1,$color: #000){
+    font-size: $font;
+    font-size: $font1;
+    color: $color;
+}
+
+.l{
+    float: left;
+}
+
+.r{
+    float: right;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@mixin border($val, $canshu: solid 1px #b2b2b2){
+    border-#{$val}: $canshu;
+}
+
+.search{
+    width: auto;
+    height: 95px;
+    background: #c41411;
+    overflow: hidden;
+}
+
+.search-in{
+    width: 80%;
+    height: 46px;
+    background: #fff;
+    margin: 18px auto;
+}
+
+.search-in input{
+    width: 86%;
+    height: 46px;
+    @include font(19px, 1.9rem);
+}
+
+.icon{
+    width: 14%;
+    height: 46px;
+    color: #c6c6c6;
+    font-family:'iconfont';
+    @include font(34.5px,3.45rem,#999);
+    text-align: center;
+    line-height: 46px;
+}
+
+.swiper-container {
+        width: auto;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.gps{
+    height: 150px;
+    width: auto;
+}
+
+.gps-son{
+    width: 25%;
+    text-align: center;
+}
+
+.gps-font{
+    margin: 12px;
+}
+
+.icon2{
+    @extend .icon;
+    color: #fff;
+    width: 56.5px;
+    height: 56.5px;
+    background: #54c2f5;
+    border-radius: 18px;
+    line-height: 56.5px;
+    margin: 32px auto 0 auto;
+}
+
+.gps a{
+    @include font(40px,4rem,#fff);
+}
+
+.icon2-1{
+    @extend .icon2;
+    background: #f56e7d;
+}
+
+.icon2-2{
+    @extend .icon2;
+    background: #fbd213;
+}
+
+.icon2-3{
+    @extend .icon2;
+    background: #6ed32a;
+}
+
+
+.gps-font{
+    @include font(18px,1.8rem,#999999);
+    margin-top: 12px;
+}
+
+.title{
+    width: auto;
+    background: #f1f1f1;
+    line-height: 61px;
+}
+
+.title-son{
+    margin: 0 auto;
+    text-align: center;
+    @include font(24px,2.4rem,#f56e7d);
+}
+
+.head{
+    width: auto;
+    overflow: hidden;
+}
+
+.top{
+    width: 100%;
+}
+
+.left,.right{
+    width: 50%;
+}
+
+.right{
+    @include border(left);
+}
+
+.big{
+    width: 50%;
+    height: 199px;
+    @include border(bottom);
+}
+
+.big-1{
+    @extend .big;
+    border-bottom: none;
+    height: 200px;
+}
+
+.small{
+    width: calc(50% - 1px);
+    height: 99px;
+    @include border(bottom);
+    @include border(left);
+    a{
+        @include font(17px,1.7rem,#191919);
+        // white-space: nowrap;
+    }
+    span{
+        @include font(9px,0.9rem,#737373);
+    }
+}
+
+.small-1{
+    height: 100px;
+    @extend .small;
+    border-bottom: none;
+}
+
+.small-2{
+    width: 50%;
+    @extend .small;
+    border-left: none;
+}
+
+.s{
+    width: calc(50% - 1px);
+    height: 99px;
+    @include border(bottom);
+    @include border(left);
+}
+
+.bottom{
+    width: calc(25% - 1px);
+    height: 146px;
+    padding-top: 12.5px;
+    @include border(left);
+    p{
+        text-align: center;
+        margin: 0 auto;
+        @include font(10px,1rem,#999)
+    }
+    h1{
+        @extend p;
+        font-weight:normal;
+        @include font(17px,1.7rem)
+    }
+}
+
+.bottom-1{
+    width: 25%;
+    @extend .bottom;
+    border-left: none;
+}
+
+.big-son{
+    margin: 27px 0 0 10%;
+    a{
+        @include font(24px,2.4rem,#f56e7d);
+    }
+    span{
+        @include font(9px,0.9rem,#737373)
+    }
+}
+
+.bag{
+    height: 110px;
+    margin: 10px
+}
+
+.small-son{
+    width :78.7%;
+    overflow: hidden;
+    margin: 20px 0 0 7.777777%;
+    a{
+        @include font(17px,1.7rem,#191919);
+        // white-space: nowrap;
+    }
+    span{
+        @include font(9px,0.9rem,#737373);
+    }
+}
+
+.small-sonm{
+    @extend .small-son;
+    width: 87%;
+}
+
+.small-pic{
+    height: 60px;
+}
+
+.small-pic1{
+    height: 60px;
+}
+
+.milk-per{
+    width: 100%;
+    text-align: center;
+}
+
+.milk{
+    height: 65px;
+    margin-top: 19px;
+}
+
+.title-son1{
+    @extend .title-son;
+    color: #f68001;
+}
+
+.big-son1{
+    @extend .big-son;
+    a{
+        color: #f68001;
+    }
+}
+
+.card{
+    height: 100px;
+    margin: 10px 5%;
+}
+
+.title-son2{
+    @extend .title-son;
+    color: #54c2f5;
+}
+
+.big-son2{
+    @extend .big-son;
+    a{
+        color: #54c2f5;
+    }
+}
+
+.word{
+    height: 135px;
+}
+
+
+.electric{
+    height: 120px;
+    margin: 10px
+}
+
+.title-son3{
+    @extend .title-son;
+    color: #8862f7;
+}
+
+.big-son3{
+    @extend .big-son;
+    a{
+        color: #8862f7;
+    }
+}
+
+.title-son4{
+    @extend .title-son;
+    color: #cd9935;
+}
+
+.big-son4{
+    @extend .big-son;
+    a{
+        color: #cd9935;
+    }
+}
+
+.title-son5{
+    @extend .title-son;
+    color: #7ac816;
+}
+
+.big-son5{
+    @extend .big-son;
+    a{
+        color: #7ac816;
+    }
+}
+
+.fitness{
+    height :130px;
+    margin: -10px 0 0 0;
+}
+
+.fitness-pic{
+    height: 80px;
+    margin: 10px 13.8% 10px 0;
+}
+
+.fitn-title{
+    margin: 20px 0 0 7.777777%;
+    a{
+        @include font(17px,1.7rem,#191919);
+        // white-space: nowrap;
+    }
+    span{
+        @include font(9px,0.9rem,#737373);
+    }
+}
+
+.child{
+    height: 171px;
+    margin-top: -46px;
+}
+
+.edu-pic{
+    height: 70px;
+}
+
+.edu{
+    @extend .small-son;
+}
+
+.fixed{
+    width: 100%;
+    background: #fff;
+    height: 82px;
+    padding-top: 16px;
+    @include border(top);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.fixed-per{
+    width: 25%;
+    font-family: 'iconfont';
+    @include font(40px,4rem,#808080);
+    text-align: center;
+}
+
+.fixed-font{
+    @include font(20px,2rem,#808080);
+}
+
+.fixed-per:hover div{
+    color: #c41411;
+}
+
+.info{
+    height: 98px;
+}
+
+@media screen and (max-width: 420px){
+    .gps-font{
+        font-size: 1.7rem;
+    }
+    .desk{
+        height: 45px;
+        margin-top: 35px;
+    }
+
+    .bab{
+        height: 50px;
+    }
+    .pan{
+        height: 45px;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .small-son{
+        width: 90%;
+        margin: 25px auto;
+        overflow: hidden;
+        a{
+            font-size: 1.6rem;
+        }
+        span{
+            font-size: 0.9rem;
+        }
+    }
+        .bottom{
+            width: calc(25% - 1px);
+            height: 146px;
+            padding-top: 12.5px;
+            @include border(left);
+        p{
+            text-align: center;
+            margin: 0 auto;
+            font-size: 10px;
+            font-size: 1rem;
+        }
+        h1{
+            font-weight:normal;
+            font-size: 1.4rem;
+        }
+    }
+    .bottom-1{
+        width: 25%;
+        border-left: none;
+    }
+
+    .small-pic{
+        height: 40px;
+    }
+    .desk{
+        height: 45px;
+        margin-top: 35px;
+    }
+
+    .bab{
+        height: 55px;
+    }
+
+    .gps-font{
+        font-size: 1.4rem;
+    }
+    .icon{
+        font-size: 3.0rem;
+    }
+
+    .fitness-pic{
+        height: 60px;
+        margin: 20px 6%  0 0
+    }
+
+    .edu-pic{
+        height: 60px;
+    }
+}

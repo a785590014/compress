@@ -1,0 +1,1 @@
+$(function(){$(".ppt-m").click(function(){var i=$(this).index();$(".video").eq(i).show().siblings(".video").hide();});});var swiper=new Swiper(".swiper-container",{pagination:".swiper-pagination",paginationClickable:!0,nextButton:".swiper-button-next",prevButton:".swiper-button-prev",spaceBetween:30,loop:!0,autoplay:1e3});
